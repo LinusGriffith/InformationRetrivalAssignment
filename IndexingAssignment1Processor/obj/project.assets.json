@@ -1,11 +1,66 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net8.0": {
+      "Porter2Stemmer/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Porter2Stemmer.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Porter2Stemmer.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "Snowball/0.12.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Snowball.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Snowball.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Porter2Stemmer/1.0.0": {
+      "sha512": "naYdTjvnmUrigtpCzgPSkqbxJ+Zy/y0dB7pH6UZ7mI0QhdU0BcncyzrJu9gArX48KzVWxQVkP/V/SpbWuAqFFw==",
+      "type": "package",
+      "path": "porter2stemmer/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "lib/net452/Porter2Stemmer.dll",
+        "lib/net452/Porter2Stemmer.pdb",
+        "lib/netstandard2.0/Porter2Stemmer.dll",
+        "lib/netstandard2.0/Porter2Stemmer.pdb",
+        "porter2stemmer.1.0.0.nupkg.sha512",
+        "porter2stemmer.nuspec"
+      ]
+    },
+    "Snowball/0.12.0": {
+      "sha512": "HcfzgC7UO1pdQ9QbrFmR7NTePa88/yn2/uyphNrhC+Qg/R4t+X25EredA4Rpwbljo9CjezTdZzHQ6IbEVkCkuA==",
+      "type": "package",
+      "path": "snowball/0.12.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Snowball.dll",
+        "snowball.0.12.0.nupkg.sha512",
+        "snowball.nuspec"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "Porter2Stemmer >= 1.0.0",
+      "Snowball >= 0.12.0"
+    ]
   },
   "packageFolders": {
     "/home/codespace/.nuget/packages/": {}
@@ -48,6 +103,16 @@
     "frameworks": {
       "net8.0": {
         "targetAlias": "net8.0",
+        "dependencies": {
+          "Porter2Stemmer": {
+            "target": "Package",
+            "version": "[1.0.0, )"
+          },
+          "Snowball": {
+            "target": "Package",
+            "version": "[0.12.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

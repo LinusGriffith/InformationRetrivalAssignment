@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "DFSV53rplpw=",
+  "dgSpecHash": "qjYkGzVxvd8=",
   "success": true,
   "projectFilePath": "/workspaces/InformationRetrivalAssignment/IndexingAssignment1Processor/IndexingAssignment1Processor.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/codespace/.nuget/packages/porter2stemmer/1.0.0/porter2stemmer.1.0.0.nupkg.sha512",
+    "/home/codespace/.nuget/packages/snowball/0.12.0/snowball.0.12.0.nupkg.sha512"
+  ],
   "logs": []
 }

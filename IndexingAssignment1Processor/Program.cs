@@ -1,4 +1,7 @@
-﻿namespace IndexingAssignment1Processor
+﻿using System.Diagnostics;
+using Porter2Stemmer;
+
+namespace IndexingAssignment1Processor
 {
     public readonly struct Document
     {
@@ -10,14 +13,18 @@
             Id = id;
             Body = body;
         }
+        
     }
 
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
-            var documents = ReadDocument("yourfile.txt");
+            Stopwatch sw = new Stopwatch();
+            sw.Start();
+            var documents = ReadDocument("IRW1.txt");
+            sw.Stop();
+            Console.WriteLine(sw.ElapsedMilliseconds);
         }
 
         public static List<Document> ReadDocument(string fileName)
@@ -26,7 +33,8 @@
             var documents = new List<Document>();
 
             string content = File.ReadAllText(fileName);
-            Console.WriteLine(content);
+
+            var porterStemmer = new Porter2Stemmer.Porter2Stemmer();
 
             var parts = content.Split(new[] { Separator }, StringSplitOptions.RemoveEmptyEntries);
             for (int i = 0; i < parts.Length; i++)

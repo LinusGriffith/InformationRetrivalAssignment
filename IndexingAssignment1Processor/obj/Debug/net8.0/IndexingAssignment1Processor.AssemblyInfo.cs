@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("IndexingAssignment1Processor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+79e8fe9005161d49cc146f8e525052c1f0f1dad4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cef5dc10776506e65679dded14ff76a0f9ea39f3")]
 [assembly: System.Reflection.AssemblyProductAttribute("IndexingAssignment1Processor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IndexingAssignment1Processor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

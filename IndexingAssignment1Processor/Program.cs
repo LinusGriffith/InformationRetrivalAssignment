@@ -34,7 +34,7 @@ namespace IndexingAssignment1Processor
 
             string content = File.ReadAllText(fileName);
 
-            var porterStemmer = new Porter2Stemmer.Porter2Stemmer();
+            var porterStemmer = new Porter2Stemmer.EnglishPorter2Stemmer();
 
             var parts = content.Split(new[] { Separator }, StringSplitOptions.RemoveEmptyEntries);
             for (int i = 0; i < parts.Length; i++)
